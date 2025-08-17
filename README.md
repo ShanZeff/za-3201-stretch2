@@ -72,3 +72,25 @@ source devel/setup.bash
 $ echo $ROS_PACKAGE_PATH
 /home/youruser/catkin_ws/src:/opt/ros/noetic/share
 ```
+
+# DIVIDER
+```bash
+cd ~/catkin_ws/src
+```
+```bash
+git clone https://github.com/hello-robot/stretch_ros -b melodic
+```
+```bash
+git clone https://github.com/pal-robotics/realsense_gazebo_plugin -b melodic_devel
+```
+```bash
+cd ~/catkin_ws
+catkin_make
+```
+```bash
+source devel/setup.bash
+```
+
+```bash
+
+```
