@@ -160,6 +160,10 @@ sudo apt install ros-noetic-ros-control ros-noetic-ros-controllers
 ```
 
 ```bash
+sudo apt install ros-noetic-teleop-twist-keyboard
+```
+
+```bash
 sudo apt install ros-noetic-navigation
 ```
 
@@ -179,7 +183,7 @@ sudo apt install ros-noetic-gazebo-ros
 sudo apt install ros-noetic-moveit
 ```
 
-### 5. Install Realsense support (optional)
+### 5. Install Realsense support
 
 ```bash
 sudo apt-get install ros-noetic-realsense2-description
