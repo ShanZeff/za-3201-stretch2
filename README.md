@@ -12,7 +12,6 @@ Python | Python3
 
 # Ubuntu install of ROS Noetic
 [reference](https://wiki.ros.org/noetic/Installation/Ubuntu)
-
 #### Step 1 – Once Ubuntu is running:
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -58,3 +57,18 @@ rosdep update
 ```
 
 # Installing and Configuring Your ROS Environment
+[reference](https://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
+#### Let's create and build a catkin workspace:
+```bash
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/
+catkin_make
+```
+```bash
+source devel/setup.bash
+```
+To make sure your workspace is properly overlayed by the setup script, make sure ROS_PACKAGE_PATH environment variable includes the directory you're in.
+```bash
+$ echo $ROS_PACKAGE_PATH
+/home/youruser/catkin_ws/src:/opt/ros/noetic/share
+```
