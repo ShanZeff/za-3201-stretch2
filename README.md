@@ -11,3 +11,12 @@ The primary testing framework being used within *stretch_ros* is pytest. Pytest 
 >>$ pytest --version
 pytest 6.2.4
 ```
+# Version
+This is a Stretch2 User Documentation. It is written with the following system configuration in mind:
+
+| Descriptor                             | Version                                           |
+| -------------------------------------- | ------------------------------------------------- |
+Model | Stretch 2
+OS | Ubuntu 20.04
+ROS | ROS Noetic
+Python | Python3
