@@ -90,6 +90,14 @@ catkin_make
 ```bash
 source devel/setup.bash
 ```
+DIVIDER AGAIN
+sudo apt update
+sudo apt install ros-noetic-gazebo-ros ros-noetic-moveit
+sudo apt install gazebo11 ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
+sudo apt-get update
+sudo apt-get install ros-noetic-realsense2-description
+sudo apt-get install ros-noetic-librealsense2
+roslaunch stretch_gazebo gazebo.launch
 
 ```bash
 
