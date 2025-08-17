@@ -1,7 +1,3 @@
-Here’s a cleaned-up and **tidied version of your README** that keeps your “one-line-per-bash-block” style for easy copy-paste, but improves readability, sectioning, and formatting:
-
----
-
 # ZA-3201 – Stretch2
 
 **Team T4 and Team T5 – Stretch2 Serving Waiter**
