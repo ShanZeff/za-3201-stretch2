@@ -11,21 +11,12 @@ ROS | ROS Noetic
 Python | Python3
 
 # Ubuntu install of ROS Noetic
-The primary testing framework being used within *stretch_ros* is pytest. Pytest is an open source testing framework that scales well and takes a functional approach resulting in minimal boiler plate code. First we should ensure that pytest is installed and up to date:
-
-```bash
->>$ pip3 install -U pytest
->>$ pytest --version
-pytest 6.2.4
-```
 
 ```bash
 
 ```
 
-DIVIDER
-Step 1 – Update system
-Once Ubuntu is running:
+Step 1 – Once Ubuntu is running:
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
@@ -41,6 +32,32 @@ sudo apt install curl -y
 ```
 ```bash
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+```
+```bash
+sudo apt update
+```
+```bash
+sudo apt install ros-noetic-desktop-full -y
+```
+Step 3 – Setup environment
+```bash
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+```
+```bash
+source ~/.bashrc
+```
+Step 4 – Install ROS build tools
+```bash
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+```
+```bash
+sudo apt install python3-rosdep
+```
+```bash
+sudo rosdep init
+```
+```bash
+rosdep update
 ```
 
 # Installing and Configuring Your ROS Environment
