@@ -99,6 +99,18 @@ catkin_make
 source devel/setup.bash
 ```
 
+Append this line to your `~/.bashrc`:
+
+```bash
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+```
+
+Then reload bashrc:
+
+```bash
+source ~/.bashrc
+```
+
 ### Verify workspace overlay
 
 ```bash
@@ -216,7 +228,7 @@ to:
 #!/usr/bin/env python3
 ```
 
-4. Save and exit (`Ctrl+O` → `Enter` → `Ctrl+X`)
+4. Save and exit (`Ctrl+S` → `Ctrl+X`)
 
 ---
 
