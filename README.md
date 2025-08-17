@@ -204,7 +204,7 @@ cd ~/catkin_ws/src/stretch_ros/stretch_gazebo/scripts
 nano publish_ground_truth_odom.py
 ```
 
-3. Change the first line (shebang) from:
+3. Change the first line from (`python` → `python3`):
 
 ```python
 #!/usr/bin/env python
