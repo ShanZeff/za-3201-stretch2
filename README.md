@@ -1,22 +1,22 @@
 # ZA-3201-Stretch2
 Team T4 and Team T5 Stretch2 Serving Waiter
 
-# Testing
-
-The primary testing framework being used within *stretch_ros* is pytest. Pytest is an open source testing framework that scales well and takes a functional approach resulting in minimal boiler plate code. First we should ensure that pytest is installed and up to date:
-
-
-```bash
->>$ pip3 install -U pytest
->>$ pytest --version
-pytest 6.2.4
-```
 # Version
 This is a Stretch2 User Documentation. It is written with the following system configuration in mind:
-
 | Descriptor                             | Version                                           |
 | -------------------------------------- | ------------------------------------------------- |
 Model | Stretch 2
 OS | Ubuntu 20.04
 ROS | ROS Noetic
 Python | Python3
+
+# Ubuntu install of ROS Noetic
+The primary testing framework being used within *stretch_ros* is pytest. Pytest is an open source testing framework that scales well and takes a functional approach resulting in minimal boiler plate code. First we should ensure that pytest is installed and up to date:
+
+```bash
+>>$ pip3 install -U pytest
+>>$ pytest --version
+pytest 6.2.4
+```
+
+# Installing and Configuring Your ROS Environment
