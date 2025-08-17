@@ -1,104 +1,241 @@
-# ZA-3201-Stretch2
-Team T4 and Team T5 Stretch2 Serving Waiter
+Here’s a cleaned-up and **tidied version of your README** that keeps your “one-line-per-bash-block” style for easy copy-paste, but improves readability, sectioning, and formatting:
 
-# Version
-This is a Stretch2 User Documentation. It is written with the following system configuration in mind:
-| Descriptor                             | Version                                           |
-| -------------------------------------- | ------------------------------------------------- |
-Model | Stretch 2
-OS | Ubuntu 20.04
-ROS | ROS Noetic
-Python | Python3
+---
 
-# Ubuntu install of ROS Noetic
-[reference](https://wiki.ros.org/noetic/Installation/Ubuntu)
-#### Step 1 – Once Ubuntu is running:
+# ZA-3201 – Stretch2
+
+**Team T4 and Team T5 – Stretch2 Serving Waiter**
+
+---
+
+## Version
+
+This documentation is written for the following system configuration:
+
+| Descriptor | Version      |
+| ---------- | ------------ |
+| Model      | Stretch 2    |
+| OS         | Ubuntu 20.04 |
+| ROS        | Noetic       |
+| Python     | Python3      |
+
+---
+
+## Ubuntu Install of ROS Noetic
+
+[Reference: ROS Noetic Installation Guide](https://wiki.ros.org/noetic/Installation/Ubuntu)
+
+### Step 1 – Update Ubuntu
+
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+
 ```bash
 sudo apt install build-essential curl git
 ```
-#### Step 2 – Install ROS Noetic Desktop Full
+
+### Step 2 – Install ROS Noetic Desktop Full
+
 ```bash
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 ```
+
 ```bash
 sudo apt install curl -y
 ```
+
 ```bash
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 ```
+
 ```bash
 sudo apt update
 ```
+
 ```bash
 sudo apt install ros-noetic-desktop-full -y
 ```
-#### Step 3 – Setup environment
+
+### Step 3 – Setup ROS environment
+
 ```bash
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 ```
+
 ```bash
 source ~/.bashrc
 ```
-#### Step 4 – Install ROS build tools
+
+### Step 4 – Install ROS build tools
+
 ```bash
 sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 ```
+
 ```bash
 sudo apt install python3-rosdep
 ```
+
 ```bash
 sudo rosdep init
 ```
+
 ```bash
 rosdep update
 ```
 
-# Installing and Configuring Your ROS Environment
-[reference](https://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
-#### Let's create and build a catkin workspace:
+---
+
+## Installing and Configuring Your ROS Workspace
+
+[Reference: Installing and Configuring ROS Environment](https://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)
+
+### Create and build a catkin workspace
+
 ```bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
 catkin_make
 ```
+
 ```bash
 source devel/setup.bash
 ```
-#### To make sure your workspace is properly overlayed by the setup script, make sure ROS_PACKAGE_PATH environment variable includes the directory you're in.
+
+### Verify workspace overlay
+
 ```bash
-$ echo $ROS_PACKAGE_PATH
-/home/youruser/catkin_ws/src:/opt/ros/noetic/share
+echo $ROS_PACKAGE_PATH
+# Expected output: /home/youruser/catkin_ws/src:/opt/ros/noetic/share
 ```
 
-# DIVIDER
+---
+
+## Clone Stretch2 ROS Packages
+
 ```bash
 cd ~/catkin_ws/src
 ```
+
 ```bash
 git clone https://github.com/hello-robot/stretch_ros -b melodic
 ```
+
 ```bash
 git clone https://github.com/pal-robotics/realsense_gazebo_plugin -b melodic_devel
 ```
+
 ```bash
 cd ~/catkin_ws
 catkin_make
 ```
+
 ```bash
 source devel/setup.bash
 ```
-DIVIDER AGAIN
-sudo apt update
-sudo apt install ros-noetic-gazebo-ros ros-noetic-moveit
-sudo apt install gazebo11 ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
-sudo apt-get update
-sudo apt-get install ros-noetic-realsense2-description
-sudo apt-get install ros-noetic-librealsense2
-roslaunch stretch_gazebo gazebo.launch
+
+---
+
+## Install Required ROS Packages
+
+### 1. Update system and package lists
 
 ```bash
-
+sudo apt-get update
 ```
+
+### 2. Install core ROS packages
+
+```bash
+sudo apt install ros-noetic-ros-control ros-noetic-ros-controllers
+```
+
+```bash
+sudo apt install ros-noetic-navigation
+```
+
+### 3. Install Gazebo and ROS integration
+
+```bash
+sudo apt install gazebo11 ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control
+```
+
+```bash
+sudo apt install ros-noetic-gazebo-ros
+```
+
+### 4. Install MoveIt for motion planning
+
+```bash
+sudo apt install ros-noetic-moveit
+```
+
+### 5. Install Realsense support (optional)
+
+```bash
+sudo apt-get install ros-noetic-realsense2-description
+```
+
+```bash
+sudo apt-get install ros-noetic-librealsense2
+```
+
+### Rebuild workspace after installing packages
+
+```bash
+cd ~/catkin_ws
+catkin_make
+```
+
+```bash
+source devel/setup.bash
+```
+
+---
+
+## Modify `publish_ground_truth_odom.py` for Python 3
+
+1. Navigate to the script folder
+
+```bash
+cd ~/catkin_ws/src/stretch_ros/stretch_gazebo/scripts
+```
+
+2. Open the script in a text editor
+
+```bash
+nano publish_ground_truth_odom.py
+```
+
+3. Change the first line (shebang) from:
+
+```python
+#!/usr/bin/env python
+```
+
+to:
+
+```python
+#!/usr/bin/env python3
+```
+
+4. Save and exit (`Ctrl+O` → `Enter` → `Ctrl+X`)
+
+---
+
+## Launching the Robot Simulation
+
+### 1. Launch Gazebo simulation
+
+```bash
+roslaunch stretch_gazebo gazebo.launch
+```
+
+### 2. Launch MoveIt demo in Gazebo
+
+```bash
+roslaunch stretch_moveit_config demo_gazebo.launch
+```
+
+---
