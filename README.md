@@ -119,7 +119,7 @@ git clone https://github.com/hello-robot/stretch_ros -b melodic
 ```
 
 ```bash
-git clone https://github.com/pal-robotics/realsense_gazebo_plugin -b melodic_devel
+git clone https://github.com/pal-robotics/realsense_gazebo_plugin -b melodic-devel
 ```
 
 ```bash
