@@ -11,12 +11,7 @@ ROS | ROS Noetic
 Python | Python3
 
 # Ubuntu install of ROS Noetic
-
-```bash
-
-```
-
-Step 1 – Once Ubuntu is running:
+#### Step 1 – Once Ubuntu is running:
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
