@@ -234,6 +234,8 @@ to:
 
 ## Launching the Robot Simulation
 
+[Reference: Running Gazebo with MoveIt! and Stretch](https://docs.hello-robot.com/0.2/stretch-tutorials/ros1/moveit_basics/)
+
 ### 1. Launch Gazebo simulation
 
 ```bash
