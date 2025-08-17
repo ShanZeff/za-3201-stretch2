@@ -11,6 +11,8 @@ ROS | ROS Noetic
 Python | Python3
 
 # Ubuntu install of ROS Noetic
+[reference](https://wiki.ros.org/noetic/Installation/Ubuntu)
+
 #### Step 1 – Once Ubuntu is running:
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -18,7 +20,7 @@ sudo apt update && sudo apt upgrade -y
 ```bash
 sudo apt install build-essential curl git
 ```
-Step 2 – Install ROS Noetic Desktop Full
+#### Step 2 – Install ROS Noetic Desktop Full
 ```bash
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 ```
@@ -34,14 +36,14 @@ sudo apt update
 ```bash
 sudo apt install ros-noetic-desktop-full -y
 ```
-Step 3 – Setup environment
+#### Step 3 – Setup environment
 ```bash
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 ```
 ```bash
 source ~/.bashrc
 ```
-Step 4 – Install ROS build tools
+#### Step 4 – Install ROS build tools
 ```bash
 sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 ```
