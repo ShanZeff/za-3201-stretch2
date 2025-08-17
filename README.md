@@ -67,7 +67,7 @@ catkin_make
 ```bash
 source devel/setup.bash
 ```
-To make sure your workspace is properly overlayed by the setup script, make sure ROS_PACKAGE_PATH environment variable includes the directory you're in.
+#### To make sure your workspace is properly overlayed by the setup script, make sure ROS_PACKAGE_PATH environment variable includes the directory you're in.
 ```bash
 $ echo $ROS_PACKAGE_PATH
 /home/youruser/catkin_ws/src:/opt/ros/noetic/share
