@@ -1,6 +1,7 @@
 # ZA-3201 – Stretch2
 
 **Team T4 and Team T5 – Stretch2 Serving Waiter**
+
 ---
 
 ## Version
@@ -14,14 +15,10 @@ This documentation is written for the following system configuration:
 | ROS        | Noetic       |
 | Python     | Python3      |
 
-**Links:
-[Start Guide](https://docs.hello-robot.com/0.2/stretch-tutorials/getting_started/quick_start_guide_re2/)
-[Follow Joint Trajectory Commands](https://docs.hello-robot.com/0.2/stretch-tutorials/ros1/follow_joint_trajectory/)****
-**
-
 Links:
 [Start Guide](https://docs.hello-robot.com/0.2/stretch-tutorials/getting_started/quick_start_guide_re2/)
 [Follow Joint Trajectory Commands](https://docs.hello-robot.com/0.2/stretch-tutorials/ros1/follow_joint_trajectory/)
+
 ---
 
 ## Ubuntu Install of ROS Noetic
