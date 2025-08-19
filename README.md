@@ -1,7 +1,9 @@
 # ZA-3201 – Stretch2
 
 **Team T4 and Team T5 – Stretch2 Serving Waiter**
-
+Links:
+[Start Guide](https://docs.hello-robot.com/0.2/stretch-tutorials/getting_started/quick_start_guide_re2/)
+[Follow Joint Trajectory Commands](https://docs.hello-robot.com/0.2/stretch-tutorials/ros1/follow_joint_trajectory/)
 ---
 
 ## Version
