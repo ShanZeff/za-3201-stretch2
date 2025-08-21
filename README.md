@@ -17,7 +17,8 @@ This documentation is written for the following system configuration:
 
 Links:
 [Start Guide](https://docs.hello-robot.com/0.2/stretch-tutorials/getting_started/quick_start_guide_re2/) || 
-[Follow Joint Trajectory Commands](https://docs.hello-robot.com/0.2/stretch-tutorials/ros1/follow_joint_trajectory/)
+[Follow Joint Trajectory Commands](https://docs.hello-robot.com/0.2/stretch-tutorials/ros1/follow_joint_trajectory/) || 
+[Stretch Demos](https://github.com/hello-robot/stretch_ros/tree/master/stretch_demos)
 
 ---
 
